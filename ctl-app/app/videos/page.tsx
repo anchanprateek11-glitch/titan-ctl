@@ -28,8 +28,7 @@ export default function VideosPage() {
     setFiltered(result)
   }, [search, bizFilter, videos])
 
-  const businesses = [...new Set(videos.map(v => v.business).filter(Boolean))] as string[]
-
+  const businesses = Array.from(new Set(videos.map(v => v.business).filter((b): b is string => Boolean(b))))
   return (
     <div className={styles.page}>
       <Header />
