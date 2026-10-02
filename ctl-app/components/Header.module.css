@@ -1,0 +1,91 @@
+.header {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(16px);
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brandText h1 {
+  font-family: var(--font-playfair), serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.brandText span {
+  font-size: 10px;
+  color: var(--fg3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.adminBadge {
+  font-size: 10px;
+  color: var(--fg3);
+  letter-spacing: 0.1em;
+}
+
+.btnGhost {
+  background: none;
+  border: 1px solid var(--glass-border);
+  color: var(--fg2);
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btnGhost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btnGold {
+  background: var(--gold);
+  border: none;
+  color: #0a0a0f;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: background 0.2s;
+}
+
+.btnGold:hover {
+  background: var(--gold-light);
+}
+
+@media (max-width: 500px) {
+  .brandText span { display: none; }
+  .header { padding: 14px 16px; }
+}
